@@ -1,0 +1,12 @@
+# Python backend
+venv/
+env/
+__pycache__/
+
+# React frontend
+node_modules/
+build/
+
+# Others
+.vscode
+.DS_Store
