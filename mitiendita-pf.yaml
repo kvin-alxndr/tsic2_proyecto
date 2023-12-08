@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mitiendita
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: mitiendita
+  template:
+    metadata:
+      labels:
+        app: mitiendita
+    spec:
+      containers:
+      - name: frontend
+        image: kevelectron/pf-frontend:latest
+        ports:
+        - containerPort: 3000
+      - name: backend
+        image: kevelectron/pf-backend:latest
+        ports:
+        - containerPort: 3005
