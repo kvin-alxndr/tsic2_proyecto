@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: kevelectron/pf-frontend:latest
+        image: kevelectron/pf-frontend2:latest
         ports:
         - containerPort: 3000
       - name: backend
