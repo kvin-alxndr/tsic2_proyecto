@@ -8,13 +8,13 @@ WORKDIR /app
 EXPOSE 3000
 
 # Copiamos los archivos necesarios para instalar las dependencias
-COPY package.json package-lock.json ./
+COPY frontend/package.json frontend/package-lock.json ./
 
 # Instalamos las dependencias
 RUN npm install
 
 # Ahora copiamos el contenido del frontend al directorio de trabajo
-COPY . ./
+COPY frontend ./
 
 # Comando para iniciar la aplicación
 CMD ["npm", "start"]
